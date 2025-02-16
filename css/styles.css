@@ -8,12 +8,8 @@ header h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden; /* Evita rolagem lateral */
+html {
+    touch-action: manipulation; /* Impede zoom por toque */
 }
 
 body {
@@ -69,6 +65,7 @@ header h2 {
     align-items: center; /* Centraliza verticalmente (se necessário) */
     text-align: center; /* Centraliza o conteúdo do texto dentro */
     width: 100%;
+    position: relative;
 }
 
 .ImagePanel {
@@ -86,15 +83,18 @@ header h2 {
     border-color: black;
     border-width: 5px;
     display: block;
+    
 }
 
 .ImageWorker {
-    position: absolute; /* Permite sobrepor */
-    top: 90.50%; /* Move a imagem para o centro vertical */
-    left: 30%; /* Move a imagem para o centro horizontal */
-    transform: translate(-50%, -50%); /* Centraliza a imagem */
-    width: 50%; /* Ajuste o tamanho conforme necessário */
+    position: absolute;
+    bottom: 0; /* Mantém a imagem alinhada à parte inferior do header */
+    left: 20%;
+    transform: translateX(-50%); /* Centraliza a imagem corretamente */
+    width: auto;
+    max-width: 200px; /* Ajuste conforme necessário */
     height: auto;
+    opacity: 0;
 }
 
 /* Cards de funcionalidades */
