@@ -1,0 +1,198 @@
+/* Estilos Gerais */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    
+    font-family: 'Roboto', sans-serif;
+}
+header h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/* Cabeçalho */
+header {
+    background: radial-gradient(circle at 50% 38%, white, rgb(250, 88, 88));
+    color: rgb(255, 255, 255); /* Cor do texto no header */
+    padding: 20px;
+    font-size: 1.5rem;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 10px;
+}
+
+header h1{
+    font-size: 100px;
+    color: rgb(255, 0, 0);
+}
+
+header h2 {
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+#highlight1{
+    color: rgb(14, 37, 43);
+}
+
+#highlight2{
+    color: rgb(255, 0, 0);
+}
+
+/* Conteúdo */
+.container {
+    max-width: 1400px;
+    margin: auto;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.ImageContainer {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se necessário) */
+    text-align: center; /* Centraliza o conteúdo do texto dentro */
+    width: 100%;
+}
+
+.ImagePanel {
+    position: relative;
+    background-image: url("Imagens/Panel.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 250px;
+    margin: auto;
+    border-radius: 20px; /* Deixa as bordas arredondadas */
+    overflow: hidden; /* Evita que a imagem ultrapasse as bordas arredondadas */
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
+
+.ImageWorker {
+    position: absolute; /* Permite sobrepor */
+    top: 90.50%; /* Move a imagem para o centro vertical */
+    left: 30%; /* Move a imagem para o centro horizontal */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+    width: 50%; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+/* Cards de funcionalidades */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.feature {
+    background: #ddd;
+    padding: 15px;
+    width: 250px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.feature:hover {
+    background: #b71c1c;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Botão */
+button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background 0.35s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.1);
+}
+
+.scroll-btn {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px 20px;
+    background-color: #919ca7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(10px); /* Os botões começam ligeiramente abaixo */
+    pointer-events: none; /* Desabilita interação enquanto invisível */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave para opacidade e transformação */
+  }
+  
+  #scrollDownBtn {
+    right: 20px;
+  }
+  
+  #scrollUpBtn {
+    right: 20px;
+  }
+  
+  .scroll-btn.show {
+    opacity: 1; /* Torna o botão visível */
+    transform: translateY(0); /* Move o botão para sua posição original */
+    pointer-events: auto; /* Habilita interação quando visível */
+  }
+  
+  .scroll-btn:hover {
+    background-color: #d11111; /* Cor de fundo ao passar o mouse */
+  }
+
+  
+/* Rodapé */
+footer {
+    margin-top: 20px;
+    background: #333;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%;
+    }
+}
