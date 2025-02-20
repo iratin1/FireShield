@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const fadeInOnScroll = () => {
         features.forEach((feature, index) => {
             const rect = feature.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 50) {
+            if (rect.top < window.innerHeight) {
                 feature.style.opacity = "1";
                 feature.style.transform = "translateY(0)";
                 feature.style.transition = `opacity 0.6s ease-out ${index * 0.2}s, transform 0.6s ease-out ${index * 0.2}s`;
@@ -19,26 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Manipulação para a primeira imagem
         const img1Rect = img1.getBoundingClientRect();
-        if (img1Rect.top < window.innerHeight - 50) {
+        if (img1Rect.top < window.innerHeight) {
             img1.style.opacity = "1";
             img1.style.transform = "translateY(0)";
             img1.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
         }
-        if (scrollY === 0) {
-            img1.style.opacity = "0";
-            img1.style.transform = "translateY(30px)";
-        }
 
         // Manipulação para a segunda imagem
         const img2Rect = img2.getBoundingClientRect();
-        if (img2Rect.top < window.innerHeight - 50) {
+        if (img2Rect.top < window.innerHeight) {
             img2.style.opacity = "1";
             img2.style.transform = "translateY(0)";
             img2.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
-        }
-        if (scrollY === 0) {
-            img2.style.opacity = "0";
-            img2.style.transform = "translateY(30px)";
         }
     };
 
