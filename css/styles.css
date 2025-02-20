@@ -266,4 +266,14 @@ footer {
     .logo-container h2 {
         font-size: 1.2rem; /* Ajuste no tamanho da fonte */
     }       
+    html, body {
+        background: radial-gradient(ellipse 40% 70% at 50% 20%, rgba(252, 82, 82, 0.8) 1%, white 50%);
+    }
+    
+    /* Para telas menores que 480px (exemplo de telas muito pequenas, como celulares) */
+    @media (max-width: 480px) {
+        html, body {
+            background: radial-gradient(ellipse 60% 80% at 50% 25%, rgba(252, 82, 82, 0.8) 1%, white 50%);
+        }
+    }
 }
