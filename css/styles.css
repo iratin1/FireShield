@@ -28,7 +28,7 @@ html, body {
     padding: 0;
     overflow-x: hidden;  /* Impede rolagem lateral inesperada */
     background: radial-gradient(ellipse 20% 25% at 50% 13%, 
-    rgba(219,227,20,0.5) 12%, 
+    rgba(219,227,20,0.5) 25%, 
     rgba(255,0,0,0.5) 51%, 
     rgba(0,0,0,1) 100%);
 
@@ -49,7 +49,7 @@ header {
 
 header h1{
     font-size: 50px;
-    color: rgb(255, 0, 0);
+    color: #000000;
 }
 
 header h2 {
@@ -121,7 +121,9 @@ header h2 {
 #highlight2{
     color: rgb(14, 37, 43);
 }
-
+#highlight3{
+    color: #E5231A;
+}
 
 .ImagePanel {
     position: relative;
@@ -134,8 +136,6 @@ header h2 {
     margin: auto;
     border-radius: 20px;
     overflow: hidden;
-    border: 5px solid black;
-    display: block;
 }
 
 .ImageWorker {
@@ -268,7 +268,7 @@ footer {
 @media (max-width: 768px) {
 
     html, body {
-        background: radial-gradient(ellipse 45% 30% at 50% 13%, 
+        background: radial-gradient(ellipse 45% 23% at 50% 13%, 
             rgba(219,227,20,0.5) 12%, 
             rgba(255,0,0,0.5) 51%, 
             rgba(0,0,0,1) 100%);
@@ -314,7 +314,7 @@ footer {
  /* Para telas menores que 480px (exemplo de telas muito pequenas, como celulares) */
  @media (max-width: 480px) {
     html, body {
-        background: radial-gradient(ellipse 50% 45% at 50% 13%, 
+        background: radial-gradient(ellipse 60% 23% at 50% 13%, 
             rgba(219,227,20,0.5) 12%, 
             rgba(255,0,0,0.5) 51%, 
             rgba(0,0,0,1) 100%);
@@ -327,8 +327,9 @@ footer {
     }
 
     .ImageWorker {
-        width: 100px; /* Fica bem menor */
-        left: 50%;
+        width: 350px; /* Fica bem menor */
+        bottom: -20px;
+        left: 0%;
         transform: translateX(-50%);
     }
 }
