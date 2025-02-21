@@ -22,10 +22,20 @@ body {
 }
 
 html, body {
-    height: 100%;  /* Garante que o body ocupe a altura completa da tela */
-    margin: 0;     /* Remove a margem padrão do body */
-    background: radial-gradient(ellipse 20% 50% at 50% 15%, rgba(252, 82, 82, 0.8) 1%, white 50%);
+    min-height: 100vh;  /* Garante que o fundo ocupe toda a altura da tela */
+    width: 100vw;       /* Evita que o fundo se repita horizontalmente */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Impede rolagem lateral inesperada */
+    background: radial-gradient(ellipse 20% 25% at 50% 13%, 
+    rgba(219,227,20,0.5) 12%, 
+    rgba(255,0,0,0.5) 51%, 
+    rgba(0,0,0,1) 100%);
+
+    background-attachment:local; /* Mantém o fundo fixo ao dar zoom */
 }
+
+
 
 /* Cabeçalho */
 header {
@@ -109,7 +119,7 @@ header h2 {
 }
 
 #highlight2{
-    color: rgb(255, 0, 0);
+    color: rgb(14, 37, 43);
 }
 
 
@@ -122,24 +132,20 @@ header h2 {
     max-width: 1400px;
     height: 250px;
     margin: auto;
-    border-radius: 20px; /* Deixa as bordas arredondadas */
-    overflow: hidden; /* Evita que a imagem ultrapasse as bordas arredondadas */
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px solid black;
     display: block;
-    
 }
 
 .ImageWorker {
     position: absolute;
-    bottom: 0; /* Mantém a imagem alinhada à parte inferior do header */
+    bottom: 0; /* Alinhado à parte inferior do painel */
     left: 20%;
-    transform: translateX(-50%); /* Centraliza a imagem corretamente */
-    width: auto;
-    max-width: 200px; /* Ajuste conforme necessário */
+    transform: translateX(-50%);
+    width: 200px; /* Tamanho padrão */
     height: auto;
-    opacity: 0;
+    opacity: 1;
 }
 
 /* Cards de funcionalidades */
@@ -239,11 +245,33 @@ footer {
     }
 }
 
+@media (max-width: 1024px) {
+    html, body {
+        background: radial-gradient(ellipse 30% 25% at 50% 13%, 
+            rgba(219,227,20,0.5) 12%, 
+            rgba(255,0,0,0.5) 51%, 
+            rgba(0,0,0,1) 100%);
+    }
+
+    .ImagePanel {
+        height: 200px;
+        max-width: 90%;
+    }
+
+    .ImageWorker {
+        width: 180px; /* Reduz a imagem */
+        left: 30%;
+    }
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
 
     html, body {
-        background: radial-gradient(ellipse 40% 70% at 50% 20%, rgba(252, 82, 82, 0.8) 1%, white 50%);
+        background: radial-gradient(ellipse 45% 30% at 50% 13%, 
+            rgba(219,227,20,0.5) 12%, 
+            rgba(255,0,0,0.5) 51%, 
+            rgba(0,0,0,1) 100%);
     }
     
     .features {
@@ -255,14 +283,14 @@ footer {
         width: 90%;
     }
 
-    .ImagePanel{
-        width: 768px;
-        height: 250px;
+    .ImagePanel {
+        height: 180px;
+        max-width: 95%;
     }
 
-    .ImageWorker{
-        width: 50px;
-        height: 50px;
+    .ImageWorker {
+        width: 140px; /* Continua diminuindo */
+        left: 40%;
     }
 
     .logo-container {
@@ -281,12 +309,26 @@ footer {
     .logo-container h2 {
         font-size: 1.2rem; /* Ajuste no tamanho da fonte */
     }     
+}
 
- 
-    /* Para telas menores que 480px (exemplo de telas muito pequenas, como celulares) */
-    @media (max-width: 480px) {
-        html, body {
-            background: radial-gradient(ellipse 60% 80% at 50% 25%, rgba(252, 82, 82, 0.8) 1%, white 50%);
-        }
+ /* Para telas menores que 480px (exemplo de telas muito pequenas, como celulares) */
+ @media (max-width: 480px) {
+    html, body {
+        background: radial-gradient(ellipse 50% 45% at 50% 13%, 
+            rgba(219,227,20,0.5) 12%, 
+            rgba(255,0,0,0.5) 51%, 
+            rgba(0,0,0,1) 100%);
+    }
+
+    .ImagePanel {
+        height: 150px;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .ImageWorker {
+        width: 100px; /* Fica bem menor */
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
