@@ -12,9 +12,9 @@
     <header>
         <section class="container-fluid logocontainer">
             <div class="container-fluid headertextcontainer">
-            <img src="css/Imagens/FireShield.png" alt="Icone" width="200" height="200"><img/>
-            <h1><b><span id="highlight3">F</span>ire<span id="highlight3">S</span>hield</b></h1>
-            <h2><i>Proteção <span id="highlight1">Inteligente</span>, Resposta <span id="highlight2">Rápida.</span></i></h2>
+            <img src="css/Imagens/FireShield.png" alt="Icone" width="200" height="200">
+            <h1><img src="css/Imagens/FireShieldLetter.png" id="ImageLetter" alt="letter" height="250"></h1>
+            <h2><i>Proteção Inteligente Resposta Rápida.</i></h2>
             </div>
         </section>
     </header>
@@ -28,34 +28,44 @@
     </section>
     
 
-    <section class="container">
-        <h2>Sobre o Sistema</h2>
-        <p>Nosso sistema atua contra princípios de incêndio em painéis elétricos e máquinas cruciais, utilizando CO2 para extinguir o fogo.</p>
+   <section class="containerContent">
+    <h2>Sobre o Sistema</h2>
+    <p>Nosso sistema atua contra princípios de incêndio em painéis elétricos, utilizando CO2.</p>
 
-        <h2>Funcionalidades</h2>
-        <div class="features" >
-            <div class="feature">
-                <h3>🔥 Sensor de Fumaça</h3>
-                <p>Detecta o incêndio e aciona alertas sonoros e visuais.</p>
-            </div>
-            <div class="feature" >
-                <h3>🔔 Alerta Automático</h3>
-                <p>Emite avisos para operadores e aciona protocolos de emergência.</p>
-            </div>
-            <div class="feature">
-                <h3>🛡️ Acionamento Manual</h3>
-                <p>O operador pode liberar CO2 para extinguir o incêndio.</p>
-            </div>
+    <h2>Funcionalidades</h2>
+    <div class="features">
+        <div class="feature" id="popSensor">
+            <h3>🔥 Sensor de fumaça</h3>
+            <p>O sistema comporta 4 sensores que quando no mínimo 2 são acionados, permitem a atuação do sistema.</p>
+        </div> 
+        <div class="feature" id="popAlerta">
+            <h3>🔔 Alerta Automático</h3>
+            <p>Após a atuação dos sensores, é acionada a sinalização audiovisual.</p>
         </div>
-        
-        <button id="infoButton">Saiba Mais</button>
-    </section>
+        <div class="feature" id="popAcionamento">
+            <h3>🛡️ Acionamento Manual</h3>
+            <p>A partir disso o operador pode realizar o acionamento do sistema que se dá por um simples botão localizado em pontos estratégicos e no painel.</p>
+        </div>
+    </div>
+</section>
 
+<section>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopupBtn">&times;</span>
+            <h2 id="popupTitle">Título do Popup</h2>
+            <img id="popupImage" src="" alt="Imagem do Popup" style="width: 100%; height: auto; margin-bottom: 15px;">
+            <p id="popupContent">Conteúdo do popup vai aqui.</p>
+        </div>
+    </div>
+</section>
+
+    
     <button id="scrollDownBtn" class="scroll-btn">Role para baixo 👇</button>
     <button id="scrollUpBtn" class="scroll-btn">Voltar para o Topo 👆</button>
 
     <footer>
-        <p>&copy; 2025 - Sistema de Combate a Incêndios</p>
+        <p>&copy; 2025 - FireShield</p>
     </footer>
 
     <script src="js/script.js"></script>
