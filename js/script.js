@@ -98,7 +98,47 @@ window.onload = () => {
   
 
 
-// Botão com efeito de alerta
-document.getElementById("infoButton").addEventListener("click", function () {
-    alert("Nosso sistema previne incêndios de forma eficiente! Saiba mais.");
+// Obtendo elementos
+const features = document.querySelectorAll('.feature'); // Todas as features
+const popup = document.getElementById('popup');
+const closePopupBtn = document.getElementById('closePopupBtn');
+
+// Função para abrir o popup com imagem
+function openPopup(title, content, imageSrc) {
+    document.getElementById('popupTitle').innerText = title;
+    document.getElementById('popupContent').innerText = content;
+    document.getElementById('popupImage').src = imageSrc; // Define a imagem no popup
+    popup.style.display = 'flex'; // Exibe o popup
+}
+
+// Função para fechar o popup
+closePopupBtn.addEventListener('click', () => {
+    popup.style.display = 'none'; // Esconde o popup
+});
+
+// Fechar o popup clicando fora dele
+window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+        popup.style.display = 'none'; // Esconde o popup se o clique for fora dele
+    }
+});
+
+// Adicionando evento de clique nas features
+features.forEach(feature => {
+    feature.addEventListener('click', () => {
+        // Dependendo do id da feature, exibe um popup diferente
+        switch (feature.id) {
+            case 'popSensor':
+                openPopup('🔥 Sensor de Fumaça', 'O sistema comporta 4 sensores que quando no mínimo 2 são acionados, permitem a atuação do sistema.', 'path_to_your_image/sensor_image.jpg');
+                break;
+            case 'popAlerta':
+                openPopup('🔔 Alerta Automático', 'Após a atuação dos sensores, é acionada a sinalização audiovisual.', 'path_to_your_image/alert_image.jpg');
+                break;
+            case 'popAcionamento':
+                openPopup('🛡️ Acionamento Manual', 'A partir disso o operador pode realizar o acionamento do sistema que se dá por um simples botão localizado em pontos estratégicos e no painel.', 'path_to_your_image/manual_activation_image.jpg');
+                break;
+            default:
+                break;
+        }
+    });
 });
