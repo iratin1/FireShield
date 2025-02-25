@@ -208,39 +208,6 @@ button:hover {
     transform: scale(1.1);
 }
 
-.scroll-btn {
-    position: fixed;
-    bottom: 20px;
-    padding: 10px 20px;
-    background-color: #919ca7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 0; /* Inicialmente invisível */
-    transform: translateY(10px); /* Os botões começam ligeiramente abaixo */
-    pointer-events: none; /* Desabilita interação enquanto invisível */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave para opacidade e transformação */
-  }
-  
-  #scrollDownBtn {
-    right: 20px;
-  }
-  
-  #scrollUpBtn {
-    right: 20px;
-  }
-  
-  .scroll-btn.show {
-    opacity: 1; /* Torna o botão visível */
-    transform: translateY(0); /* Move o botão para sua posição original */
-    pointer-events: auto; /* Habilita interação quando visível */
-  }
-  
-  .scroll-btn:hover {
-    background-color: #d11111; /* Cor de fundo ao passar o mouse */
-  }
-
 /* Estilo do Popup */
 
 .popup {
@@ -293,7 +260,7 @@ button:hover {
 }
 
 .feature {
-    width: 30%;
+    width: 100%;
     background-color: #f0f0f0;
     padding: 15px;
     border-radius: 8px;
@@ -335,8 +302,10 @@ footer {
     }
 
     .ImageWorker {
-        width: 180px; /* Reduz a imagem */
-        left: 30%;
+        width: 350px; /* Fica bem menor */
+        bottom: -24px;
+        left: 0%;
+        transform: translateX(-50%);
     }
 }
 
@@ -365,7 +334,7 @@ footer {
     }
 
     .ImageWorker {
-        width: 140px; /* Continua diminuindo */
+        width: auto; /* Continua diminuindo */
         left: 40%;
     }
 
@@ -403,9 +372,9 @@ footer {
     }
 
     .ImageWorker {
-        width: 350px; /* Fica bem menor */
+        width: 315px; /* Fica bem menor */
         bottom: -24px;
-        left: -10%;
+        left: -8%;
         transform: translateX(-50%);
     }
 }
