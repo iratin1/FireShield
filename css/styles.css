@@ -65,11 +65,9 @@ header h2 {
 
 
 
-/* Conteúdo */
 .containerContent {
-    max-width: 100%;
-    margin: 15px;
-    margin-bottom: 5px;
+    max-width: 90%; /* Defina uma largura específica, se necessário */
+    margin: 15px auto 5px auto; /* Auto nas laterais para centralizar horizontalmente */
     background: rgb(255, 255, 255);
     border-radius: 10px;
     animation: fadeIn 1s ease-in-out; 
@@ -93,6 +91,10 @@ header h2 {
     flex-direction: column;
     background-color: none;
     margin-bottom: -100px;
+}
+
+.ImageWorker{
+    height: 500px;
 }
 
 .form-btn{
@@ -151,19 +153,18 @@ header h2 {
     background-image: url("Imagens/Panel.jpeg");
     background-size: cover;
     background-position: center;
-    width: 90%; /* Mantém responsivo */
-    max-width: 1400px;
+    width: 91%; /* Mantém responsivo */
     height: 250px;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .ImageWorker {
     position: absolute;
-    bottom: 0; /* Alinhado à parte inferior do painel */
+    bottom: -9.6%; /* Alinhado à parte inferior do painel */
     left: 20%;
     transform: translateX(-50%);
-    width: 200px; /* Tamanho padrão */
+    width: 500px;
     height: auto;
     opacity: 1;
 }
@@ -242,10 +243,9 @@ button:hover {
 
 /* Estilo do botão de fechar */
 .close-btn {
-    position: absolute;
-    top: 10px;      /* Distância do topo */
-    right: 10px;    /* Distância da direita */
+    position: relative;    /* Distância do topo */  
     font-size: 25px;
+    left: 45%;
     color: #333;    /* Cor do texto */
     cursor: pointer; /* Cursor de mãozinha quando passar o mouse */
     z-index: 1001;   /* Garante que o botão fique acima do conteúdo do popup */
