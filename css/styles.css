@@ -72,13 +72,18 @@ header h2 {
 
 .containerContent {
     max-width: 100%; /* Defina uma largura específica, se necessário */
-    width: 1475px;
+    width: 1775px;
     margin: 15px auto 5px auto; /* Auto nas laterais para centralizar horizontalmente */
     background: rgb(255, 255, 255);
     border-radius: 10px;
     animation: fadeIn 1s ease-in-out; 
     padding: 10px;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.8);
+    border: rgba(255, 0, 0, 0.8);
+    border-style: solid;
+    border-width: 1px;
 }
+
 
 .ImageContainer {
     display: flex;
@@ -146,6 +151,11 @@ header h2 {
     height: 250px;
     margin: auto;
     border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    border: rgba(255, 0, 0, 0.8);
+    border-style: solid;
+    overflow: hidden;
+    border-width: 1px;
 }
 
 .ImageWorker {
@@ -156,6 +166,7 @@ header h2 {
     width: 500px;
     height: auto;
     opacity: 1;
+    clip-path: inset(0px 0px -50px 0px); /* Faz apenas a parte inferior ultrapassar */
 }
 
 /* Cards de funcionalidades */
@@ -249,16 +260,17 @@ button:hover {
 .pitch{
     margin: 0;
     padding: 0;
+    border: 0;
     display: block; /* Remover o espaço embaixo do vídeo */
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     box-shadow: 0 4px 20px rgba(255, 0, 0, 0.8);
 }
 
 .video{
     margin: 0;
     padding: 0;
+    border: 0;
     max-width: 100%;
-    border-radius: 10px;
     box-shadow: 0 4px 20px rgba(255, 0, 0, 0.8);
     display: inline-block;
 }
@@ -307,12 +319,41 @@ footer {
     }
 }
 
+@media(max-width: 1280px){
+    html, body {
+        background: radial-gradient(ellipse 30% 25% at 50% 13%, 
+            rgba(219,227,20,0.5) 12%, 
+            rgba(255,0,0,0.5) 51%, 
+            rgba(0,0,0,1) 100%);
+    }
+
+    .containerContent{
+        width: 87.5%;
+    }
+
+    .ImagePanel {
+        height: 200px;
+        max-width: 90%;
+    }
+
+    .ImageWorker {
+        width: 350px; /* Fica bem menor */
+        bottom: -24px;
+        left: 0%;
+        transform: translateX(-50%);
+    }
+}
+
 @media (max-width: 1024px) {
     html, body {
         background: radial-gradient(ellipse 30% 25% at 50% 13%, 
             rgba(219,227,20,0.5) 12%, 
             rgba(255,0,0,0.5) 51%, 
             rgba(0,0,0,1) 100%);
+    }
+
+    .containerContent{
+        width: 87.5%;
     }
 
     .ImagePanel {
@@ -348,14 +389,30 @@ footer {
         width: 90%;
     }
 
+    .containerContent{
+        width: 91%;
+    }
+
+    .pitch{
+        width: 98%;
+        height: 98%;
+    }
+
+    iframe{
+        width: 450px;
+        height: 250px;
+    }
+
+
     .ImagePanel {
         height: 180px;
         max-width: 95%;
     }
 
     .ImageWorker {
-        width: auto; /* Continua diminuindo */
-        left: 40%;
+        width: 450px; /* Continua diminuindo */
+        position: absolute;
+        left: -5%;
     }   
 }
 
@@ -384,8 +441,8 @@ footer {
     }
 
     iframe{
-        width: 250px;
-        height: 100px;
+        width: 350px;
+        height: 200px;
     }
 
     .ImageWorker {
@@ -411,11 +468,12 @@ footer {
     }
 
     .pitch{
-        width: 250px;
-        height: 100px;
+        width: 100%;
+        height: 100%;
     }
 
     iframe{
-        width: 180px;
+        width: 320px;
+        height: 200px;
     }
 }
