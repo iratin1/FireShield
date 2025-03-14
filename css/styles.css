@@ -331,6 +331,7 @@ footer {
         width: 87.5%;
     }
 
+
     .ImagePanel {
         height: 200px;
         max-width: 90%;
@@ -393,16 +394,10 @@ footer {
         width: 91%;
     }
 
-    .pitch{
-        width: 98%;
-        height: 98%;
-    }
-
     iframe{
         width: 450px;
         height: 250px;
     }
-
 
     .ImagePanel {
         height: 180px;
@@ -435,11 +430,6 @@ footer {
         max-width: 89%;
     }
 
-    .pitch{
-        width: 98%;
-        height: 98%;
-    }
-
     iframe{
         width: 350px;
         height: 200px;
@@ -465,11 +455,6 @@ footer {
         bottom: -24px;
         left: 0%;
         transform: translateX(-50%);
-    }
-
-    .pitch{
-        width: 100%;
-        height: 100%;
     }
 
     iframe{
