@@ -43,12 +43,22 @@ const features = document.querySelectorAll('.feature'); // Todas as features
 const popup = document.getElementById('popup');
 const closePopupBtn = document.getElementById('closePopupBtn');
 
-// Função para abrir o popup com imagem
+// Função para abrir o popup com título, conteúdo e imagem
 function openPopup(title, content, imageSrc) {
+    // Obtendo o elemento do popup
+    const popup = document.getElementById('popup');
+    
+    // Definindo o título
     document.getElementById('popupTitle').innerText = title;
-    document.getElementById('popupContent').innerText = content;
-    document.getElementById('popupImage').src = imageSrc; // Define a imagem no popup
-    popup.style.display = 'flex'; // Exibe o popup
+
+    // Definindo o conteúdo com suporte para HTML (usando innerHTML)
+    document.getElementById('popupContent').innerHTML = content;
+
+    // Definindo a imagem do popup
+    document.getElementById('popupImage').src = imageSrc;
+
+    // Exibe o popup
+    popup.style.display = 'flex'; // Exibe o popup, tornando-o visível
 }
 
 // Função para fechar o popup
@@ -69,21 +79,36 @@ features.forEach(feature => {
         // Dependendo do id da feature, exibe um popup diferente
         switch (feature.id) {
             case 'popSensor':
-                openPopup('🔥 Sensor de Fumaça', 'O sistema comporta 4 sensores que quando no mínimo 2 são acionados, permitem a atuação do sistema.', 'path_to_your_image/sensor_image.jpg');
+                openPopup('🔦 Sensor Fotossensível',
+                    '<b>Sensor fotossensível com saída a relé NA</b><br><br>' + 
+                    'Instalação a 4 fios, positivo, negativo e relé NA.',
+                     '/css/Imagens/Fotossensivel.jpeg');
                 break;
             case 'popAlerta':
-                openPopup('🔔 Alerta Automático', 'Após a atuação dos sensores, é acionada a sinalização audiovisual.', 'path_to_your_image/alert_image.jpg');
+                openPopup('🔔 Alerta Automático', '<b>Sinalizador audiovisual.</b><br><br>'+
+                    'Sinalização após a atuação dos sensores.', 
+                    '/css/Imagens/Sinal.jpeg');
                 break;
             case 'popAcionamento':
-                openPopup('🛡️ Acionamento Manual', 'A partir disso o operador pode realizar o acionamento do sistema que se dá por um simples botão localizado em pontos estratégicos e no painel.', 'path_to_your_image/manual_activation_image.jpg');
+                openPopup('🛡️ Acionamento Manual', 
+                    '<b>Botão de emergencia estilo soco.</b><br><br>' +
+                     'Responsavel pela atuação do sistema na injeção de CO2 no interior do painel (Contato NA).', 
+                    '/css/Imagens/Botao.png');
                 break;
+            case 'popFoto':
+                openPopup('🔥 Sensor de Fumaça', 
+        '<b>Sensor / Detector de Fumaça com Saída Relé NA tipo Convencional.</b><br><br>' +
+        'Instalação a 4 fios, positivo, negativo e relé NA.',
+        '/css/Imagens/Sensor.jpg'
+    );
+                break;    
             default:
                 break;
         }
     });
 });
 
-document.addEventListener("contextmenu", function (e) {
+ document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
   });
 
