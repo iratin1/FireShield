@@ -82,24 +82,24 @@ features.forEach(feature => {
                 openPopup('🔦 Sensor Fotossensível',
                     '<b>Sensor fotossensível com saída a relé NA</b><br><br>' + 
                     'Instalação a 4 fios, positivo, negativo e relé NA.',
-                     '/css/Imagens/Fotossensivel.jpeg');
+                     'css/Imagens/Fotossensivel.jpeg');
                 break;
             case 'popAlerta':
                 openPopup('🔔 Alerta Automático', '<b>Sinalizador audiovisual.</b><br><br>'+
                     'Sinalização após a atuação dos sensores.', 
-                    '/css/Imagens/Sinal.jpeg');
+                    'css/Imagens/Sinal.jpeg');
                 break;
             case 'popAcionamento':
                 openPopup('🛡️ Acionamento Manual', 
                     '<b>Botão de emergencia estilo soco.</b><br><br>' +
                      'Responsavel pela atuação do sistema na injeção de CO2 no interior do painel (Contato NA).', 
-                    '/css/Imagens/Botao.png');
+                    'css/Imagens/Botao.png');
                 break;
             case 'popFoto':
                 openPopup('🔥 Sensor de Fumaça', 
         '<b>Sensor / Detector de Fumaça com Saída Relé NA tipo Convencional.</b><br><br>' +
         'Instalação a 4 fios, positivo, negativo e relé NA.',
-        '/css/Imagens/Sensor.jpg'
+        'css/Imagens/Sensor.jpg'
     );
                 break;    
             default:
