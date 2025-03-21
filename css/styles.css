@@ -72,7 +72,7 @@ header h2 {
 
 .containerContent {
     max-width: 100%; /* Defina uma largura específica, se necessário */
-    width: 1775px;
+    width: 560px;
     margin: 15px auto 5px auto; /* Auto nas laterais para centralizar horizontalmente */
     background: rgb(255, 255, 255);
     border-radius: 10px;
@@ -82,6 +82,9 @@ header h2 {
     border: rgba(255, 0, 0, 0.8);
     border-style: solid;
     border-width: 0.1px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -113,11 +116,6 @@ header h2 {
     text-align: center;
 }
 
-.ImageWorker{
-    height: 500px;
-    left: -15%;
-}
-
 .form-btn{
     position: sticky;
     margin: 5px;
@@ -147,8 +145,8 @@ header h2 {
     background-image: url("Imagens/Panel.jpeg");
     background-size: cover;
     background-position: center;
-    width: 94%; /* Mantém responsivo */
-    height: 250px;
+    width: 560px; 
+    height: 400px;
     margin: auto;
     border-radius: 10px;
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
@@ -160,8 +158,8 @@ header h2 {
 
 .ImageWorker {
     position: absolute;
-    bottom: -9.6%; /* Alinhado à parte inferior do painel */
-    left: 20%;
+    bottom: -6.2%; /* Alinhado à parte inferior do painel */
+    left: 48%;
     transform: translateX(-50%);
     width: 500px;
     height: auto;
@@ -173,22 +171,31 @@ header h2 {
 .features {
     display: flex;
     flex-direction: column;
-    align-items:  flex-start;
+    align-items:  center;
     gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
     margin-top: 20px;
     
 }
 
 .feature {
     background: #ddd;
-    width: 250px;
+    width: 450px;
     border-radius: 5px;
     opacity: 0;
     transform: translateY(30px);
     padding-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
-    
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .feature:hover {
@@ -224,28 +231,37 @@ button:hover {
     top: 0;
     width: 100%;
     height: 100%;
+    font-size: 25px;
     background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
     z-index: 9999; /* Garantir que o popup fique sobre outros elementos */
     justify-content: center;
     align-items: center;
 }
 
+#popupImage {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
 
 /* Estilo do conteúdo do popup */
 .popup-content {
     background-color: white;
+    height: auto;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     width: 100%;
     max-width: 90%;
+    overflow-y: auto; /* Permite rolagem se o conteúdo for maior que a altura */
+    width: 90%; /* Ajuste de largura */
 }
 
 /* Estilo do botão de fechar */
 .close-btn {
-    position: relative;    /* Distância do topo */  
+    position: fixed;    /* Distância do topo */  
     font-size: 25px;
-    left: 45%;
+    left: 88%;
     color: #333;    /* Cor do texto */
     cursor: pointer; /* Cursor de mãozinha quando passar o mouse */
     z-index: 1001;   /* Garante que o botão fique acima do conteúdo do popup */
@@ -261,7 +277,7 @@ button:hover {
     margin: 0;
     padding: 0;
     border: 0;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     box-shadow: 0 4px 80px rgba(255, 0, 0, 0.8);
 }
 
@@ -280,22 +296,6 @@ iframe {
     border: 0;
     top: 0;
     left: 0;
-}
-
-/* Estilos para as features */
-.features {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.feature {
-    width: 100%;
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
   
 /* Rodapé */
@@ -328,19 +328,25 @@ footer {
     }
 
     .containerContent{
-        width: 87.5%;
+        width: 550px;
+        height: auto;
     }
 
 
     .ImagePanel {
-        height: 200px;
-        max-width: 90%;
+        width: 550px;
+        height: 350px;
+    }
+
+    iframe{
+        width: 550px;
+        height: 350px;
     }
 
     .ImageWorker {
         width: 350px; /* Fica bem menor */
         bottom: -24px;
-        left: 0%;
+        left: 45%;
         transform: translateX(-50%);
     }
 }
@@ -354,19 +360,25 @@ footer {
     }
 
     .containerContent{
-        width: 87.5%;
+        width: 550px;
+        height: auto;
     }
 
     .ImagePanel {
-        height: 200px;
-        max-width: 90%;
+        width: 550px;
+        height: 350px;
     }
 
     .ImageWorker {
         width: 350px; /* Fica bem menor */
         bottom: -24px;
-        left: 0%;
+        left: 45%;
         transform: translateX(-50%);
+    }
+
+    iframe{
+        width: 550px;
+        height: 350px;
     }
 }
 
@@ -391,7 +403,8 @@ footer {
     }
 
     .containerContent{
-        width: 91%;
+        width: 450px;
+        height: auto;
     }
 
     iframe{
@@ -400,14 +413,14 @@ footer {
     }
 
     .ImagePanel {
-        height: 180px;
-        max-width: 95%;
+        width: 450px;
+        height: 250px;
     }
 
     .ImageWorker {
-        width: 450px; /* Continua diminuindo */
+        width: 350px; /* Continua diminuindo */
         position: absolute;
-        left: -5%;
+        left: 45%;
     }   
 }
 
@@ -420,14 +433,14 @@ footer {
             rgba(0,0,0,1) 100%);
     }
 
-    .ImagePanel {
-        height: 150px;
-        max-width: 100%;
-        border-radius: 10px;
+    .containerContent{
+        width: 350px;
+        height: auto;
     }
 
-    .containerContent{
-        max-width: 89%;
+    .ImagePanel{
+        width: 350px;
+        height: 200px;;
     }
 
     iframe{
@@ -438,12 +451,43 @@ footer {
     .ImageWorker {
         width: 250px; /* Fica bem menor */
         bottom: -24px;
-        left: 0%;
+        left: 45%;
         transform: translateX(-50%);
     }
 }
 
-@media (max-width: 371px) {
+
+
+@media (max-width: 390px) {
+    html, body {
+        background: radial-gradient(ellipse 60% 23% at 50% 13%, 
+            rgba(219,227,20,0.5) 12%, 
+            rgba(255,0,0,0.5) 51%, 
+            rgba(0,0,0,1) 100%);
+    }
+    .containerContent{
+        width: 320px;
+        height: auto;
+    }
+
+    .ImagePanel{
+        width: 320px;
+        height: 200px;
+    }
+    .ImageWorker {
+        width: 250px; /* Fica bem menor */
+        bottom: -24px;
+        left: 45%;
+        transform: translateX(-50%);
+    }
+
+    iframe{
+        width: 320px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 375px) {
     html, body {
         background: radial-gradient(ellipse 60% 23% at 50% 13%, 
             rgba(219,227,20,0.5) 12%, 
@@ -453,8 +497,18 @@ footer {
     .ImageWorker {
         width: 250px; /* Fica bem menor */
         bottom: -24px;
-        left: 0%;
+        left: 45%;
         transform: translateX(-50%);
+    }
+
+    .ImagePanel{
+        width: 320px;
+        height: 200px;
+    }
+
+    .containerContent{
+        width: 320px;
+        height: auto;
     }
 
     iframe{
