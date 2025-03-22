@@ -253,6 +253,7 @@ button:hover {
     text-align: center;
     width: 100%;
     max-width: 90%;
+    max-height: 80%;
     overflow-y: auto; /* Permite rolagem se o conteúdo for maior que a altura */
     width: 90%; /* Ajuste de largura */
 }
