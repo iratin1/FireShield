@@ -108,7 +108,7 @@ features.forEach(feature => {
     });
 });
 
- /*document.addEventListener("contextmenu", function (e) {
+ document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
   });
 
@@ -127,4 +127,4 @@ features.forEach(feature => {
     if (after - before > 100) {
       window.location.href = "https://www.google.com"; // Redireciona para outra página
     }
-  }, 1000);*/
+  }, 1000);
